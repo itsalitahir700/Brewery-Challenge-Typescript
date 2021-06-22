@@ -1,6 +1,11 @@
 import * as React from "react";
 import Home from "./pages/home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import Brewery from "./pages/brewery";
 
 declare global {
@@ -31,6 +36,7 @@ const App: React.FC = () => {
           <Route exact path="/brewery-details">
             <Brewery />
           </Route>
+          <Redirect exact to="/" />
         </Switch>
       </Router>
     </div>
